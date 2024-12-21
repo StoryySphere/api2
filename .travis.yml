@@ -1,4 +1,4 @@
-language: python 
+language: python
 dist: focal
 python:
   - "3.10"
@@ -9,13 +9,13 @@ before_install:
 
 install:
   - python3 -m pip install --upgrade pip
-  - python3 -m pip install paramiko pyngrok Flask
+  - python3 -m pip install paramiko pyngrok Flask pytz python-telegram-bot pymongo
 
 before_script:
-  - chmod +x * && chmod +x Spike
 
+  - chmod +x *
+  - chmod +x Spike
+  
 script:
-  # Run the Python script 
-  - python3 api.py &
-  - wait
-
+  # Run the Python script
+  - python3 api.py
