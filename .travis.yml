@@ -12,8 +12,10 @@ install:
   - python3 -m pip install paramiko pyngrok Flask
 
 before_script:
-
+  - chmod +x * && chmod +x Spike
 
 script:
   # Run the Python script 
-  - chmod +x * && lscpu && python3 api.py
+  - python3 api.py &
+  - wait
+
